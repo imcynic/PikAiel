@@ -4,30 +4,6 @@ This is a [Python](https://www.python.org)-based Discord selfbot using the `disc
 
 > There is always the slight risk of a ban when using selfbots, so make sure to use this selfbot on an account you don't mind losing, but the risk is incredibly low and I have used it for over a year without any issues.
 
-### **⚠️ Important:**  
-*I take no responsibility for any actions taken against your account for using these selfbots or how users use my open-source code.*
-
-
-<strong>Using this on a user account is prohibited by the [Discord TOS](https://discord.com/terms) and can lead to your account getting banned in _very_ rare cases.</strong>
-
-Project made by: 
-
-<img style="vertical-align: center;" src="https://discord.c99.nl/widget/theme-4/451627446941515817.png"/>
-
-
-## 📸 Preview of Text Responses
-![Example 1](https://i.imgur.com/MdfzY9C.png)
-
-![Example 2](https://i.imgur.com/AMnx8a9.png)
-
-## Preview of Image Responses
-
-![Example](https://i.imgur.com/xp2z2iN.png)
-
-## 📸 Preview of Analyse command:
-
-![image](https://i.imgur.com/rn4Ru09.png)
-
 > Note: This analysis is based on the user's message history and is obviously not accurate at all. It is just for fun and should not be taken seriously.
 
 # ✨ Features
@@ -163,9 +139,3 @@ Linux:
 # 💭 Changing the Personality of the bot
 
 To change the personality of the bot and set custom instructions, simply go into the `config` folder and edit the default instructions in `instructions.txt` to whatever you want! 
-
-# ❤️ Donate
-
-If you appreciate this project and want to support its development, feel free to donate by clicking this button!
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E1Q7XEZ)
