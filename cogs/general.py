@@ -40,9 +40,41 @@ Bot Commands:
 {prefix}shutdown - Shuts down the entire bot
 
 Created by @najmul (451627446941515817) (Discord Server: /yUWmzQBV4P)
-https://github.com/Najmul190/Discord-AI-Selfbot```
+https://github.com/imcynic/PikAiel```
 """
         await ctx.send(help_text, delete_after=30)
+
+    @commands.command(name="message")
+    async def message_user(self, ctx, target_id: str, *, prompt_topic: str):
+        """Allows authorized users to send a message to another user"""
+        AUTHORIZED_IDS = [194636586397204480, 1091212878855540807]
+        
+        if ctx.author.id not in AUTHORIZED_IDS:
+            await ctx.send("You are not authorized to use this command.", delete_after=5)
+            return
+        
+        try:
+            target_id = int(target_id)
+            target_user = await self.bot.fetch_user(target_id)
+            
+            if not target_user:
+                await ctx.send(f"Could not find user with ID {target_id}", delete_after=10)
+                return
+            
+            try:
+                await target_user.send(prompt_topic)
+                await ctx.send(f"Message sent to {target_user.name}#{target_user.discriminator}", delete_after=10)
+            except discord.Forbidden:
+                await ctx.send(f"Cannot send DM to {target_user.name}#{target_user.discriminator} - they may have DMs disabled or blocked the bot.", delete_after=10)
+            except Exception as e:
+                await ctx.send(f"Failed to send message: {str(e)}", delete_after=10)
+                
+        except ValueError:
+            await ctx.send("Invalid user ID. Please provide a valid Discord user ID.", delete_after=10)
+        except discord.NotFound:
+            await ctx.send(f"User with ID {target_id} not found.", delete_after=10)
+        except Exception as e:
+            await ctx.send(f"An error occurred: {str(e)}", delete_after=10)
 
     @commands.command(
         aliases=["analyze"],

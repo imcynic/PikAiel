@@ -72,7 +72,7 @@ You can also try out this project in our server, in the [#italiano](https://disc
 # ⭐ Getting Started:
 
 ### Step 1: Download the Selfbot
-- Go to the [Releases](https://github.com/Najmul190/Discord-AI-Selfbot/releases/latest) page and download the latest release for your operating system.
+- Go to the [Releases](https://github.com/imcynic/PikAiel/releases/latest) page and download the latest release for your operating system.
 
 ### Step 2: Extract the files
 - Extract the files to a folder of your choice, using 7Zip or Windows Explorer.
@@ -101,8 +101,8 @@ Windows:
 
 Linux:
 
-- Open a terminal and run `chmod +x "Discord-AI-Selfbot"` to make the file executable.
-- Run `./"Discord-AI-Selfbot"` to start the bot and follow the instructions in the console to set it up.
+- Open a terminal and run `chmod +x "PikAiel"` to make the file executable.
+- Run `./"PikAiel"` to start the bot and follow the instructions in the console to set it up.
 
 # 🛠️ Setting up the bot manually:
 
@@ -111,13 +111,13 @@ If you want to set up the bot manually because you don't trust the executable or
 ### Step 1: Git clone repository
 
 ```
-git clone https://github.com/Najmul190/Discord-AI-Selfbot
+git clone https://github.com/imcynic/PikAiel
 ```
 
 ### Step 2: Changing directory to cloned directory
 
 ```
-cd Discord-AI-Selfbot
+cd PikAiel
 ```
 
 ### Step 3: Getting your Discord token
@@ -141,7 +141,7 @@ Windows:
 
 -   Simply open `run.bat` if you're on Windows. This will install all pre-requisites, guide you through the process of setting up the bot and run it for you.
 
--   If `run.bat` doesn't work, then open CMD and run `cd Discord-AI-Selfbot` to change directory to the bot files directory
+-   If `run.bat` doesn't work, then open CMD and run `cd PikAiel` to change directory to the bot files directory
 -   Create a virtual environment by running `python -m venv bot-env`
 -   Activate the virtual environment by running `bot-env\Scripts\activate.bat`
 -   Run `pip install -r requirements.txt` to install all the dependencies

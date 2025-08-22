@@ -33,7 +33,7 @@ def check_config():
 
 
 def check_for_update():
-    url = "https://api.github.com/repos/Najmul190/Discord-AI-Selfbot/releases/latest"
+    url = "https://api.github.com/repos/imcynic/PikAiel/releases/latest"
     response = requests.get(url)
 
     if response.status_code == 200:
@@ -48,7 +48,7 @@ update_available = latest_version and latest_version != current_version
 
 if update_available:
     print(
-        f"{Fore.RED}A new version of the AI Selfbot is available! Please update to {latest_version} at: \nhttps://github.com/Najmul190/Discord-AI-Selfbot/releases/latest{Style.RESET_ALL}"
+        f"{Fore.RED}A new version of the AI Selfbot is available! Please update to {latest_version} at: \nhttps://github.com/imcynic/PikAiel/releases/latest{Style.RESET_ALL}"
     )
 
     time.sleep(5)
@@ -75,7 +75,6 @@ init_ai()
 TOKEN = os.getenv("DISCORD_TOKEN")
 PREFIX = config["bot"]["prefix"]
 OWNER_ID = config["bot"]["owner_id"]
-TRIGGER = config["bot"]["trigger"].lower().split(",")
 DISABLE_MENTIONS = config["bot"]["disable_mentions"]
 
 bot = commands.Bot(command_prefix=PREFIX, help_command=None)
@@ -161,7 +160,7 @@ async def on_ready():
 
     if update_available:
         print(
-            f"{Fore.RED}A new version of the AI Selfbot is available! Please update to {latest_version} at: \nhttps://github.com/Najmul190/Discord-AI-Selfbot/releases/latest{Style.RESET_ALL}\n"
+            f"{Fore.RED}A new version of the AI Selfbot is available! Please update to {latest_version} at: \nhttps://github.com/imcynic/PikAiel/releases/latest{Style.RESET_ALL}\n"
         )
 
     if len(bot.active_channels) > 0:
@@ -217,14 +216,8 @@ def is_trigger_message(message):
         and bot.hold_conversation
     )
 
-    content_has_trigger = any(
-        re.search(rf"\b{re.escape(keyword)}\b", message.content.lower())
-        for keyword in TRIGGER
-    )
-
     if (
-        content_has_trigger
-        or mentioned
+        mentioned
         or replied_to
         or is_dm
         or is_group_dm
@@ -233,8 +226,7 @@ def is_trigger_message(message):
         bot.active_conversations[conv_key] = time.time()
 
     return (
-        content_has_trigger
-        or mentioned
+        mentioned
         or replied_to
         or is_dm
         or is_group_dm
