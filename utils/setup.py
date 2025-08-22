@@ -81,9 +81,6 @@ def create_config():
                 )
             ),
             "prefix": get_input("Enter command prefix", default="~"),
-            "trigger": get_input(
-                "Enter trigger word(s) (comma-separated for multiple)"
-            ),
             "groq_model": "llama3-70b-8192",
             "openai_model": "gpt-4o",
             "allow_dm": input("Allow DMs? (y/n): ").lower() == "y",
@@ -145,9 +142,6 @@ def create_config():
         yaml.safe_dump(config, f, default_flow_style=False)
 
     print(f"\n{Fore.GREEN}Setup complete! Configuration saved.{Style.RESET_ALL}")
-    print(
-        f"\n{Fore.LIGHTBLACK_EX}For help or support, join: https://discord.gg/yUWmzQBV4P{Style.RESET_ALL}"
-    )
 
     sleep(3)
 

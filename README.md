@@ -1,6 +1,6 @@
 # 🤖 Discord AI Selfbot
 
-This is a [Python](https://www.python.org)-based Discord selfbot using the `discord.py-self` library. The selfbot automatically responds to messages that mention it's trigger word and holds conversations using Groq API's Llama-3, one of the highest performing models, **all for completely free**. You can also add your own API key for ChatGPT functionality, but this is not required. It functions as a normal Discord bot, but on a real Discord account, allowing other people to talk to it within DMs, servers and even group chats without you needing to invite a bot or add the bot to the server - making it seem like a real user to others.
+This is a [Python](https://www.python.org)-based Discord selfbot using the `discord.py-self` library. The selfbot automatically responds to all DMs and holds conversations using Groq API's Llama-3, one of the highest performing models, **all for completely free**. You can also add your own API key for ChatGPT functionality, but this is not required. It functions as a normal Discord bot, but on a real Discord account, allowing other people to talk to it within DMs, servers and even group chats without you needing to invite a bot or add the bot to the server - making it seem like a real user to others.
 
 > There is always the slight risk of a ban when using selfbots, so make sure to use this selfbot on an account you don't mind losing, but the risk is incredibly low and I have used it for over a year without any issues.
 
@@ -14,13 +14,6 @@ Project made by:
 
 <img style="vertical-align: center;" src="https://discord.c99.nl/widget/theme-4/451627446941515817.png"/>
 
-# 🔗 Support + Try out the bot!
-
-If you have any questions, need assistance or want news on updates, please join our dedicated Discord server. You can ask your questions there and leave once you have the help you need, or stay and be part of the community!
-
-You can also try out this project in our server, in the [#italiano](https://discord.com/channels/1269313927150309491/1270821127001866311) channel! Click the image below to join.
-
-[![Discord Banner 2](https://discord.com/api/guilds/1269313927150309491/widget.png?style=banner2)](https://discord.gg/yUWmzQBV4P)
 
 ## 📸 Preview of Text Responses
 ![Example 1](https://i.imgur.com/MdfzY9C.png)
@@ -43,7 +36,7 @@ You can also try out this project in our server, in the [#italiano](https://disc
 -   [x] Custom AI Instructions: You can replace the text inside of `instructions.txt` and make the AI act however you'd like!
 -   [x] Realistic Typing: The bot types like a real person, with varying speeds and pauses.
 -   [x] Free LLM Model: Enjoy the powerful capabilities of this language model without spending a dime.
--   [x] Mention Recognition: The bot only responds when you mention it or say its trigger word.
+-   [x] DM Recognition: The bot automatically responds to all direct messages.
 -   [x] Reply Recognition: If replied to, the bot will continue to reply to you. It's like having a conversation with a real person!
 -   [x] Message Handling: The bot knows when you're replying to someone else, so it won't cause confusion. It's like having a mind reader in your server; It can also handle numerous messages at once!
 -   [x] Image Recognition: The bot can recognize images and respond to them in character!
@@ -164,7 +157,7 @@ Linux:
 -   To activate it in a channel use **~toggleactive channelid** (channelid is optional).
 -   To see all commands use **~help**
 -   Bear in mind that the bot will only respond to **other accounts** and not itself, including any commands.
--   You must also set a trigger word within the `config.yaml`, this is the word that the bot will respond to. For example, if you set the trigger word to `John`, people must say "Hey `John`, how are you today?" for the bot to respond.
+-   The bot will automatically respond to all direct messages sent to it.
 
 
 # 💭 Changing the Personality of the bot

@@ -124,7 +124,7 @@ def create_border(char="═"):
 def print_header():
     width = get_terminal_size()
     border = create_border()
-    title = "AI Selfbot by Najmul"
+    title = "AI Selfbot by Cynic"
     padding = " " * ((width - len(title) - 2) // 2)
 
     print(f"{Fore.CYAN}╔{border}╗")
@@ -175,9 +175,6 @@ async def on_ready():
     else:
         print(f"Bot is currently not active in any channel, use {PREFIX}toggleactive command to activate it in a channel.")
 
-    print(
-        f"\n{Fore.LIGHTBLACK_EX}Join the Discord server for support and news on updates: https://discord.gg/yUWmzQBV4P{Style.RESET_ALL}"
-    )
 
     print_separator()
 

@@ -39,7 +39,7 @@ Bot Commands:
 {prefix}restart - Restarts the entire bot
 {prefix}shutdown - Shuts down the entire bot
 
-Created by @najmul (451627446941515817) (Discord Server: /yUWmzQBV4P)
+Created by @cynic
 https://github.com/imcynic/PikAiel```
 """
         await ctx.send(help_text, delete_after=30)
